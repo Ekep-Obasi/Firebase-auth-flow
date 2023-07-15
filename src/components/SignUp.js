@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Card, Button, Form, Container, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import Loader from "./Loader";
 
 const SignUp = () => {
   const emailRef = useRef();
@@ -39,7 +40,7 @@ const SignUp = () => {
           setError("Email/password accounts are not enabled.");
           break;
         default:
-          console.log(err.message)
+          console.log(err.message);
           setError("Something went wrong! Try again Later");
           break;
       }
@@ -83,9 +84,10 @@ const SignUp = () => {
           </Card.Body>
         </Card>
         <div className="text-center w-100 mt-2">
-          Already have an account? <Link to="login">Login</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </div>
       </Container>
+      <Loader visibility={loading} />
     </Container>
   );
 };
