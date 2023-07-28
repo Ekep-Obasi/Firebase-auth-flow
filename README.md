@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+A Sample login system with firebase and boostrap
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
